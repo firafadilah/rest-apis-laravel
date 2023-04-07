@@ -21,6 +21,18 @@ class WisataController extends Controller
     public function store(Request $request)
     {
         Wisata::create($request->all());
-        return  redirect('/');
+        return  redirect('/products');
+    }
+
+    public function edit($id)
+    {
+        $wisatas = Wisata::find($id);
+        return view('products.edit', compact(['wisatas']));
+    }
+    public function update(Request $request, $id)
+    {
+        $wisatas =  Wisata::find($id);
+        $wisatas->update($request->all());
+        return redirect('/products');
     }
 }

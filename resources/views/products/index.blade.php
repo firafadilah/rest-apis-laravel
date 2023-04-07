@@ -15,11 +15,14 @@
             <td>{{ $wisata->lokasi }}</td>
             <td>{{ $wisata->description }}</td>
             <td>{{ $wisata->price }}</td>
+            <td>
+                <a href="/products/{{ $wisata->id }}/edit">Edit</a>
+            </td>
         </tr> 
         @endforeach
     </tbody>
 
-    <a href="/create">Create</a>
+    <a href="/products/create">Create</a>
 </table>
 
 
