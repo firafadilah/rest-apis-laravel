@@ -17,6 +17,11 @@
             <td>{{ $wisata->price }}</td>
             <td>
                 <a href="/products/{{ $wisata->id }}/edit">Edit</a>
+                <form action="/products/{{ $wisata->id }}"  method="POST">
+                    @method('DELETE')
+                    @csrf
+                    <input type="submit" value="Delete">
+                </form>
             </td>
         </tr> 
         @endforeach

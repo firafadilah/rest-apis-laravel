@@ -35,4 +35,10 @@ class WisataController extends Controller
         $wisatas->update($request->all());
         return redirect('/products');
     }
+    public function destroy($id)
+    {
+        $wisatas = Wisata::find($id);
+        $wisatas->delete();
+        return redirect('/products');
+    }
 }

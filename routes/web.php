@@ -20,3 +20,4 @@ Route::get('/products/create', [WisataController::class, 'create']);
 Route::post('/products', [WisataController::class, 'store']);
 Route::get('/products/{id}/edit', [WisataController::class, 'edit']);
 Route::put('/products/{id}/', [WisataController::class, 'update']);
+Route::delete('/products/{id}', [WisataController::class, 'destroy']);
