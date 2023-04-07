@@ -15,9 +15,9 @@ use App\Http\Controllers\WisataController;
 |
 */
 
-Route::get('/products', [WisataController::class, 'index']);
-Route::get('/products/create', [WisataController::class, 'create']);
-Route::post('/products', [WisataController::class, 'store']);
-Route::get('/products/{id}/edit', [WisataController::class, 'edit']);
-Route::put('/products/{id}/', [WisataController::class, 'update']);
-Route::delete('/products/{id}', [WisataController::class, 'destroy']);
+Route::get('/wisatas', [WisataController::class, 'index']);
+Route::get('/wisatas/create', [WisataController::class, 'create']);
+Route::post('/wisatas', [WisataController::class, 'store']);
+Route::get('/wisatas/{id}/edit', [WisataController::class, 'edit']);
+Route::put('/wisatas/{id}/', [WisataController::class, 'update']);
+Route::delete('/wisatas/{id}', [WisataController::class, 'destroy']);

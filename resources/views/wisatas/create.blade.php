@@ -1,6 +1,6 @@
 <h1>Create Tiket Wisatawan</h1>
 
-<form action="/products" method="POST">
+<form action="/wisatas" method="POST">
     @csrf
     Name : <input type="text" name="name"><br>
     Description: <input type="text" name="description"><br>

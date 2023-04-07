@@ -16,8 +16,8 @@
             <td>{{ $wisata->description }}</td>
             <td>{{ $wisata->price }}</td>
             <td>
-                <a href="/products/{{ $wisata->id }}/edit">Edit</a>
-                <form action="/products/{{ $wisata->id }}"  method="POST">
+                <a href="/wisatas/{{ $wisata->id }}/edit">Edit</a>
+                <form action="/wisatas/{{ $wisata->id }}"  method="POST">
                     @method('DELETE')
                     @csrf
                     <input type="submit" value="Delete">
@@ -27,7 +27,7 @@
         @endforeach
     </tbody>
 
-    <a href="/products/create">Create</a>
+    <a href="/wisatas/create">Create</a>
 </table>
 
 

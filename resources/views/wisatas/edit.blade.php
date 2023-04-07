@@ -1,6 +1,6 @@
 <h1>Edit Tiket Wisatawan</h1>
 
-<form action="/products/{{ $wisatas->id }}" method="POST">
+<form action="/wisatas/{{ $wisatas->id }}" method="POST">
     @method('PUT')
     @csrf
     Name : <input type="text" name="name" value="{{ $wisatas->name }}"><br>
