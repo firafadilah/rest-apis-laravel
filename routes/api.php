@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WisataApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('/products', [WisataApiController::class, 'index']);
+Route::post('/products', [WisataApiController::class, 'store']);
+Route::get('/products/{id}', [WisataApiController::class, 'show']);
+Route::put('/products/{id}/', [WisataApiController::class, 'update']);
+Route::delete('/products/{id}', [WisataApiController::class, 'destroy']);
